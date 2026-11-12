@@ -20,5 +20,8 @@ describe('slide media and focus lifecycle', () => {
     syncSlideFocus([first, second], first);
     expect(first.inert).toBe(false);
     expect(second.inert).toBe(true);
+    syncSlideFocus([first, second], null);
+    expect(first.inert).toBe(false);
+    expect(second.inert).toBe(false);
   });
 });

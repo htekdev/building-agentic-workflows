@@ -14,7 +14,7 @@ export function renderSlide(slide: Slide, sources: Source[], handout = false): s
   }).join(' <span aria-hidden="true">/</span> ');
   const notes = `<aside class="${handout ? 'handout-notes' : 'notes'}">${marked.parse(slide.notes)}</aside>`;
   const tag = handout ? 'article' : 'section';
-  return `<${tag} id="${escape(slide.id)}" ${handout ? '' : 'data-auto-animate="false"'}>${marked.parse(slide.body)}
+  return `<${tag} id="${escape(slide.id)}">${marked.parse(slide.body)}
     <div class="sources" aria-label="Slide sources">${references}</div>${notes}</${tag}>`;
 }
 

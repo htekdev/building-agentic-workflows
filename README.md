@@ -41,9 +41,11 @@ are made by tests.
 `npm run build` alone creates the site; `npm run export:pdf` then adds the PDF
 downloads. Deployments use the full check command, never the incomplete build alone.
 
-To present without an external network, keep the generated `dist/` folder and run
-`npm run preview` from the installed project. Runtime assets are bundled locally.
-Serve it through a local static server rather than opening HTML with `file://`.
+To present without an external network, keep the generated `dist/` folder or
+download the `offline-presentation` Actions artifact. Extract it and run
+`node serve.mjs` from that directory, then open the printed local address.
+The package requires only Node.js: no npm install, CDNs, or external services.
+Use this local server rather than opening HTML with `file://`.
 
 ## Edit content
 

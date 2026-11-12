@@ -19,6 +19,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--focus-outlineCo
 .skip-link:focus { top: 0; }
 .reveal { height: calc(100dvh - 110px); font-size: var(--base-size-40); font-family: var(--fontStack-system); color: var(--fgColor-default); }
 .reveal .slides { text-align: left; }
+.reveal.overview .slides > section[hidden] { display: block !important; }
 .reveal h1 { font-size: 2.7em; line-height: 1.08; letter-spacing: -.025em; }
 .reveal h2 { font-size: 1.85em; line-height: 1.13; margin-bottom: var(--base-size-32); }
 .reveal h3 { font-size: 1.05em; }
@@ -45,7 +46,7 @@ th, td { padding: var(--base-size-12); border-bottom: 1px solid var(--borderColo
 .flow small { display: block; color: var(--fgColor-muted); margin-top: var(--base-size-12); }
 .badge { display: inline-block; border: 1px solid var(--borderColor-attention-emphasis); color: var(--fgColor-attention); padding: var(--base-size-4) var(--base-size-12); border-radius: var(--borderRadius-full); font-size: .55em !important; }
 .help { text-align: center; padding: var(--base-size-8); color: var(--fgColor-muted); font-size: 12px; }
-.handout main { max-width: 880px; padding: var(--base-size-32); margin: auto; line-height: 1.65; }
+.handout main { max-width: 880px; padding: var(--base-size-32); margin: auto; line-height: 1.65; font-size: var(--text-body-size-large); }
 .handout h1 { font-size: 2.5rem; line-height: 1.15; }
 .handout h2 { margin: var(--base-size-32) 0 var(--base-size-16); line-height: 1.2; }
 .handout article { padding: var(--base-size-32) 0; border-top: 1px solid var(--borderColor-default); }
@@ -54,6 +55,8 @@ th, td { padding: var(--base-size-12); border-bottom: 1px solid var(--borderColo
 .handout-notes::before { content: 'Speaker notes'; display: block; font-weight: 600; }
 .handout pre { overflow: auto; background: var(--bgColor-muted); padding: var(--base-size-16); }
 .handout .flow > span { font-size: 1rem; }
+.handout .flow { flex-wrap: wrap; }
+.handout .flow > span { flex: 1 1 40%; min-width: 0; overflow-wrap: anywhere; }
 .handout .badge { font-size: .85rem !important; }
 @media (max-width: 700px) {
   .toolbar { flex-direction: column; align-items: flex-start; }

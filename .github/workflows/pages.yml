@@ -48,6 +48,11 @@ jobs:
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         with:
           path: dist
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: offline-presentation
+          path: dist/
+          retention-days: 14
 
   deploy:
     name: Deploy Pages

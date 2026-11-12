@@ -14,6 +14,10 @@ test('navigates stable slide links and keeps hidden links out of focus', async (
   await expect(page.locator('#tool-management')).toBeVisible();
   await page.keyboard.press('Escape');
   await expect(page.locator('.reveal')).toHaveClass(/overview/);
+  await expect(page.locator('#welcome')).toHaveJSProperty('inert', false);
+  await page.locator('#safe-outputs').click();
+  await expect(page.locator('.reveal')).not.toHaveClass(/overview/);
+  await expect(page).toHaveURL(/#\/safe-outputs/);
   expect(failures).toEqual([]);
 });
 
@@ -58,4 +62,20 @@ test('serves real PDFs and supports reduced motion without missing assets', asyn
     expect(response.ok()).toBe(true);
     expect((await response.body()).subarray(0, 4).toString()).toBe('%PDF');
   }
+});
+
+test('all slides fit the presentation canvas and the handout fits a narrow screen', async ({ page }) => {
+  await page.goto('./');
+  await expect(page.locator('.reveal')).toHaveClass(/ready/);
+  const ids = await page.locator('.slides > section').evaluateAll((slides) => slides.map((slide) => slide.id));
+  for (const id of ids) {
+    await page.goto(`./#/${id}`);
+    const slide = page.locator(`#${id}`);
+    await expect(slide).toHaveClass(/present/);
+    expect(await slide.evaluate((element) => element.scrollHeight), id).toBeLessThanOrEqual(900);
+  }
+  await page.setViewportSize({ width: 375, height: 812 });
+  await page.goto('./handout.html');
+  await expect(page.locator('#references')).toBeVisible();
+  expect(await page.evaluate(() => document.body.scrollWidth)).toBeLessThanOrEqual(375);
 });

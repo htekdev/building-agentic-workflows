@@ -51,6 +51,11 @@ if (handout) {
   };
   deck.on('slidechanged', update);
   deck.on('ready', update);
+  deck.on('overviewshown', () => {
+    pauseVideos(document);
+    syncSlideFocus(document.querySelectorAll<HTMLElement>('.slides > section'), null);
+  });
+  deck.on('overviewhidden', update);
   await deck.initialize();
   document.querySelector('#speaker')?.addEventListener('click', () => {
     const notes = deck.getPlugin('notes');
