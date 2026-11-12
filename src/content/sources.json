@@ -13,6 +13,8 @@
   {"id":"G12","title":"Introducing GitHub Copilot","url":"https://github.blog/news-insights/product-news/introducing-github-copilot-ai-pair-programmer/","kind":"official announcement, June 29, 2021"},
   {"id":"G13","title":"Copilot general availability","url":"https://github.blog/changelog/2022-06-21-github-copilot-is-now-available-to-individual-developers/","kind":"official announcement, June 21, 2022"},
   {"id":"G14","title":"Copilot CLI general availability","url":"https://github.blog/changelog/2026-02-25-github-copilot-cli-is-now-generally-available/","kind":"official announcement, February 25, 2026"},
+  {"id":"G15","title":"GitHub Agentic Workflows generally available","url":"https://github.blog/changelog/2026-10-28-github-agentic-workflows-generally-available/","kind":"official announcement, October 28, 2026"},
+  {"id":"G16","title":"gh-aw v1.2.2 release","url":"https://github.com/github/gh-aw/releases/tag/v1.2.2","kind":"official release, November 10, 2026; checked November 12"},
   {"id":"H1","title":"Hector: Agentic Workflows hands-on guide","url":"https://htek.dev/articles/github-agentic-workflows-hands-on-guide","kind":"author experience; historical examples"},
   {"id":"H2","title":"Hector: Context engineering","url":"https://htek.dev/articles/context-engineering-key-to-ai-development","kind":"author perspective"},
   {"id":"H3","title":"Hector: Three pillars of Agentic DevOps","url":"https://htek.dev/articles/three-pillars-agentic-devops-zero-to-hero","kind":"author perspective"},

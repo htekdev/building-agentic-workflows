@@ -6,6 +6,23 @@ research links, an accessible reading handout, and printable PDFs.
 The presentation covers Copilot's evolution, GitHub Agentic Workflows, Copilot
 dynamic workflows, deterministic extension tools, human review, and adoption.
 
+## November 12, 2026 research refresh
+
+Start with the [presentation resource map](docs/README.md): timed outline, expanded
+talk track, inner/outer-loop diagrams, engineering scenarios, governance, scaling,
+safe demo runbook, and dated claim/source matrix.
+
+**Status:** GitHub Agentic Workflows (`gh-aw`) became generally available on
+[October 28, 2026](https://github.blog/changelog/2026-10-28-github-agentic-workflows-generally-available/).
+[Dynamic workflows](https://docs.github.com/en/copilot/concepts/agents/dynamic-workflows)
+remain a separate public-preview feature. Neither statement implies feature parity.
+The [verification record](docs/verification.md) distinguishes local checks from
+model-backed demonstrations that have **not** been executed.
+
+The outline offers 30/45/60-minute adaptations, not a confirmed event duration.
+No private invitation, correspondence, attendee information, or internal document
+content belongs in this public repository.
+
 ## Status
 
 The deck includes three **proposed demo storyboards**, not completed recordings.

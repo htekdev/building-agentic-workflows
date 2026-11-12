@@ -28,6 +28,39 @@ The shift is **who owns the next step**.
 Note:
 Purpose: explain evolution without pretending older modes disappeared. GitHub introduced Copilot's technical preview on June 29, 2021 and made it generally available on June 21, 2022. The modern terminal-native Copilot CLI became GA on February 25, 2026. Dynamic workflows were announced October 1, 2026. These are selected milestones, not an exhaustive product history. Do not confuse the modern agentic CLI with the older gh copilot shell-command extension. Transition: define agentic work.
 ---
+<!-- feedback-loops | H3,G7 -->
+## Shorten feedback loops, not accountability
+
+<div class="flow" aria-label="Pedagogical delivery progression"><span>Phases<small>Plan / build / test / release</small></span><span>DevOps<small>Shorter integrated feedback</small></span><span>Agent-assisted<small>Tight plan / build / test / deliver</small></span></div>
+
+AI did not invent iteration. DevOps already includes continuous planning.
+
+Note:
+Purpose: make Hector's feedback-loop framing explicit as a teaching model, not an exclusive historical claim. A phased drawing highlights handoffs; DevOps integrates operational and delivery feedback. Agent assistance can tighten implementation cycles but does not replace reliable tests, review or ownership. Transition: agents can also investigate which work deserves to enter that loop.
+---
+<!-- continuous-ai | H3,G7 -->
+## Continuous AI: the outer loop feeds the inner loop
+
+<div class="flow" aria-label="Outer loop to engineering inner loop"><span>Observe<small>Maintenance signals</small></span><span>Investigate<small>Cited evidence</small></span><span>Prioritize<small>Human decision</small></span><span>Inner loop<small>Plan / build / test / deliver</small></span></div>
+
+Delivery feedback informs the next observation—not guaranteed autonomous maintenance.
+
+Note:
+Purpose: separate opportunity discovery from implementation. This is our pedagogical Continuous AI pattern, not a product guarantee. Expanded agency can investigate and propose improvements; a maintainer accepts, rejects, combines or defers work. Accepted work gets explicit acceptance criteria before entering the engineering inner loop. Delivery results become evidence for the next outer-loop pass. Transition: each bounded task still needs a goal, tools, evidence and a stop condition.
+---
+<!-- product-status | G15,G16,G1,G3 -->
+## Name the product. Date the status.
+
+| Product | Status checked November 12, 2026 |
+| --- | --- |
+| GitHub Agentic Workflows | GA October 28; release v1.2.2 November 10 |
+| Copilot Dynamic workflows | Public preview; announced October 1 |
+
+GA on Actions does not make every local preview API stable.
+
+Note:
+Purpose: correct stale preview-era material without overextending GA. The official GHAW announcement is dated October 28, 2026. The release page checked for this refresh marks v1.2.2 latest. Dynamic workflows remain a distinct publicly documented preview across CLI, app and SDK; they are not internal-only and are not the same runtime/schema as GHAW. Recheck status immediately before the talk. Transition: define an agentic loop independently of a product name.
+---
 <!-- agentic-loop | G1,G7 -->
 ## A goal, a loop, and a stop condition
 

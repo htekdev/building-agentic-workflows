@@ -24,6 +24,7 @@ test('navigates stable slide links and keeps hidden links out of focus', async (
 test('opens public notes in speaker view and offers readable handout', async ({ page }) => {
   await page.goto('./');
   await expect(page.locator('.reveal')).toHaveClass(/ready/);
+  const slideCount = await page.locator('.slides > section').count();
   const popupPromise = page.waitForEvent('popup');
   await page.getByRole('button', { name: 'Speaker view' }).click();
   const popup = await popupPromise;
@@ -33,7 +34,10 @@ test('opens public notes in speaker view and offers readable handout', async ({ 
   await page.getByRole('link', { name: 'Handout & notes' }).click();
   await expect(page.getByRole('heading', { name: 'Research sources' })).toBeVisible();
   await expect(page.locator('.handout-notes').first()).toContainText('Purpose:');
-  await expect(page.locator('article')).toHaveCount(35);
+  await expect(page.locator('article')).toHaveCount(slideCount);
+  for (const id of ['feedback-loops', 'continuous-ai', 'product-status']) {
+    await expect(page.locator(`article#${id}`)).toHaveCount(1);
+  }
 });
 
 test('has no serious accessibility violations on the title and handout', async ({ page }) => {
