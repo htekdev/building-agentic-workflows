@@ -1,0 +1,13 @@
+@media print {
+  .toolbar, .help, .skip-link, .reveal .controls { display: none !important; }
+  .handout { color: #1f2328; background: white; }
+  .handout main { padding: 0; max-width: none; }
+  .handout article { break-inside: auto; }
+  .handout h2, .handout h3 { break-after: avoid; }
+  .handout pre, .handout .flow, .handout table { break-inside: avoid; }
+  .handout a { color: #0969da; }
+  .handout .flow { display: flex; }
+  .handout .flow > span, .handout .handout-notes { background: #f6f8fa; color: #1f2328; }
+  .handout .badge { color: #7d4e00; }
+}
+@page { size: A4; margin: 16mm; }
